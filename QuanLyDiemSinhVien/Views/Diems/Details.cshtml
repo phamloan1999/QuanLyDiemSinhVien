@@ -1,0 +1,51 @@
+﻿@model QuanLyDiemSinhVien.Models.Diem
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Diem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MonHocs.TenMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonHocs.TenMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SinhViens.TenSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SinhViens.TenSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiemLan1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiemLan1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiemLan2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiemLan2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HocKy }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
