@@ -224,7 +224,7 @@ namespace QuanLyDiemSinhVien.Controllers
             bulkcopy.ColumnMappings.Add(3, "NgaySinh");
             bulkcopy.ColumnMappings.Add(4, "MaLop");
             bulkcopy.ColumnMappings.Add(5, "QueQuan");
-           /// bulkcopy.WriteToServer(dt);
+            bulkcopy.WriteToServer(dt);
             con.Close();
         }
         public ActionResult DownloadFile()

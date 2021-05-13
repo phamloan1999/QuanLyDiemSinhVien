@@ -227,7 +227,7 @@ namespace QuanLyDiemSinhVien.Controllers
             bulkcopy.ColumnMappings.Add(4, "DiemLan2");
             bulkcopy.ColumnMappings.Add(5, "DiemTrungBinh");
             bulkcopy.ColumnMappings.Add(6, "XepLoai");
-            //bulkcopy.WriteToServer(dt);
+            bulkcopy.WriteToServer(dt);
             con.Close();
         }
         public ActionResult DownloadFile()
