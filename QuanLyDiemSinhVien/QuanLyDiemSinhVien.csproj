@@ -188,10 +188,6 @@
     <Compile Include="Migrations\202105121501395_Create_Table_Khoa.Designer.cs">
       <DependentUpon>202105121501395_Create_Table_Khoa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105122134223_Create_Table_Diem.cs" />
-    <Compile Include="Migrations\202105122134223_Create_Table_Diem.Designer.cs">
-      <DependentUpon>202105122134223_Create_Table_Diem.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\Diem.cs" />
@@ -1438,9 +1434,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105121501395_Create_Table_Khoa.resx">
       <DependentUpon>202105121501395_Create_Table_Khoa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105122134223_Create_Table_Diem.resx">
-      <DependentUpon>202105122134223_Create_Table_Diem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
