@@ -8,7 +8,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Thêm mới khoa", "Create")
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
@@ -23,6 +23,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DienThoai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Logo)
         </th>
         <th></th>
     </tr>
@@ -40,6 +43,9 @@
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.DienThoai)
+    </td>
+    <td>
+        @Html.Raw(item.Logo)
     </td>
     <td>
         @Html.ActionLink("Edit", "Edit", new { id = item.MaKhoa }) |

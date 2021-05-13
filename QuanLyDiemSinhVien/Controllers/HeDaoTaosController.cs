@@ -14,11 +14,13 @@ using QuanLyDiemSinhVien.Models;
 
 namespace QuanLyDiemSinhVien.Controllers
 {
+    [Authorize(Roles = "sinhvien02")]
     public class HeDaoTaosController : Controller
     {
         private QLDSVDbContext db = new QLDSVDbContext();
 
         // GET: HeDaoTaos
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.HeDaoTaos.ToList());
@@ -129,5 +131,5 @@ namespace QuanLyDiemSinhVien.Controllers
         }
         
     }
-    }
+}
 

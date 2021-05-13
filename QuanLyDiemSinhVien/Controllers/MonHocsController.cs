@@ -10,17 +10,21 @@ using QuanLyDiemSinhVien.Models;
 
 namespace QuanLyDiemSinhVien.Controllers
 {
+    [Authorize(Roles = "sinhvien02")]
     public class MonHocsController : Controller
     {
+
         private QLDSVDbContext db = new QLDSVDbContext();
 
         // GET: MonHocs
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.MonHocs.ToList());
         }
 
         // GET: MonHocs/Details/5
+        
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -36,7 +40,7 @@ namespace QuanLyDiemSinhVien.Controllers
         }
 
         // GET: MonHocs/Create
-        [Authorize (Roles ="sinhvien02")]
+       
         public ActionResult Create()
         {
             return View();
@@ -60,6 +64,7 @@ namespace QuanLyDiemSinhVien.Controllers
         }
 
         // GET: MonHocs/Edit/5
+        
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -91,6 +96,7 @@ namespace QuanLyDiemSinhVien.Controllers
         }
 
         // GET: MonHocs/Delete/5
+       
         public ActionResult Delete(string id)
         {
             if (id == null)

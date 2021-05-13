@@ -14,11 +14,13 @@ using QuanLyDiemSinhVien.Models;
 
 namespace QuanLyDiemSinhVien.Controllers
 {
+    [Authorize(Roles = "sinhvien02")]
     public class SinhViensController : Controller
     {
         private QLDSVDbContext db = new QLDSVDbContext();
 
         // GET: SinhViens
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var sinhViens = db.SinhViens.Include(s => s.Lops);
@@ -41,6 +43,7 @@ namespace QuanLyDiemSinhVien.Controllers
         }
 
         // GET: SinhViens/Create
+       
         public ActionResult Create()
         {
             ViewBag.MaLop = new SelectList(db.Lops, "MaLop", "TenLop");
@@ -147,6 +150,7 @@ namespace QuanLyDiemSinhVien.Controllers
                     file.SaveAs(_path);
                     DataTable dt = ReadDataFromExcelFile(_path);
 
+
                     CopyDataByBulk(dt);
                 }
             }
@@ -220,8 +224,7 @@ namespace QuanLyDiemSinhVien.Controllers
             bulkcopy.ColumnMappings.Add(3, "NgaySinh");
             bulkcopy.ColumnMappings.Add(4, "MaLop");
             bulkcopy.ColumnMappings.Add(5, "QueQuan");
-
-            //bulkcopy.WriteToServer(dt);
+           /// bulkcopy.WriteToServer(dt);
             con.Close();
         }
         public ActionResult DownloadFile()
@@ -235,5 +238,6 @@ namespace QuanLyDiemSinhVien.Controllers
             //tra ve file
             return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
         }
+
     }
 }

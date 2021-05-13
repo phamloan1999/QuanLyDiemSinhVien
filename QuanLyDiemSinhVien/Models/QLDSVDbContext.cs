@@ -19,7 +19,7 @@ namespace QuanLyDiemSinhVien.Models
         public virtual DbSet<Lop> Lops { get; set; }
         public virtual DbSet<MonHoc> MonHocs{ get; set; }
         public virtual DbSet<SinhVien> SinhViens { get; set; }
-        public virtual DbSet<Article> Articles { get; set; }
+       
         public virtual DbSet<AccountModel> AccountModels { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
 

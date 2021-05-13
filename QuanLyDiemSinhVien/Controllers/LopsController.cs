@@ -10,11 +10,13 @@ using QuanLyDiemSinhVien.Models;
 
 namespace QuanLyDiemSinhVien.Controllers
 {
+    [Authorize(Roles = "sinhvien02")]
     public class LopsController : Controller
     {
         private QLDSVDbContext db = new QLDSVDbContext();
 
         // GET: Lops
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var lops = db.Lops.Include(l => l.HeDaoTaos).Include(l => l.KhoaHocs).Include(l => l.Khoas);

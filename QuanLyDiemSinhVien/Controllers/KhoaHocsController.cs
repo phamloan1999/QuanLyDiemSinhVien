@@ -10,11 +10,13 @@ using QuanLyDiemSinhVien.Models;
 
 namespace QuanLyDiemSinhVien.Controllers
 {
+    [Authorize(Roles = "sinhvien02")]
     public class KhoaHocsController : Controller
     {
         private QLDSVDbContext db = new QLDSVDbContext();
 
         // GET: KhoaHocs
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.KhoaHocs.ToList());
