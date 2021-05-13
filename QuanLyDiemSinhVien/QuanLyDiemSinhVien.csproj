@@ -176,10 +176,6 @@
     <Compile Include="Migrations\202105121307551_Alter_Database1.Designer.cs">
       <DependentUpon>202105121307551_Alter_Database1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105121327549_Alter_Database2.cs" />
-    <Compile Include="Migrations\202105121327549_Alter_Database2.Designer.cs">
-      <DependentUpon>202105121327549_Alter_Database2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202105121359191_Alter_Column_Diem_DiemTrungBinh.cs" />
     <Compile Include="Migrations\202105121359191_Alter_Column_Diem_DiemTrungBinh.Designer.cs">
       <DependentUpon>202105121359191_Alter_Column_Diem_DiemTrungBinh.cs</DependentUpon>
@@ -1425,9 +1421,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105121307551_Alter_Database1.resx">
       <DependentUpon>202105121307551_Alter_Database1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105121327549_Alter_Database2.resx">
-      <DependentUpon>202105121327549_Alter_Database2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105121359191_Alter_Column_Diem_DiemTrungBinh.resx">
       <DependentUpon>202105121359191_Alter_Column_Diem_DiemTrungBinh.cs</DependentUpon>

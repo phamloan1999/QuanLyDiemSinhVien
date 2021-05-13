@@ -14,11 +14,13 @@ using QuanLyDiemSinhVien.Models;
 
 namespace QuanLyDiemSinhVien.Controllers
 {
+    [Authorize(Roles = "sinhvien02")]
     public class DiemsController : Controller
     {
         private QLDSVDbContext db = new QLDSVDbContext();
 
         // GET: Diems
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var diems = db.Diems.Include(d => d.MonHocs).Include(d => d.SinhViens);
